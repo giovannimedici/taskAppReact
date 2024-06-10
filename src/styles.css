@@ -1,0 +1,74 @@
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(#121212, #212b46);
+}
+
+.title {
+    color: #ffffff;
+}
+
+.containerInput{
+    background-color: rgba(255, 255, 255, 0);
+    padding: 15px;
+    margin: 34px 0;
+    display: flex;
+    border-radius: 8px;
+    box-shadow: 1px 3px 8px rgba(0,0,0, 0.5);
+}
+
+.containerInput input{
+    background-color: transparent;
+    border: 0;
+    font-size: 20px;
+    color: #FFF;
+    outline: none;
+    margin-right: 8px;
+}
+
+.buttonAdd {
+    background-color: transparent;
+    border: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.buttonAdd:hover{
+    transform: scale(1.2);
+}
+
+.displayContainer {
+    background-color: transparent;
+    border-radius: 8px;
+    margin: 14px 0;
+    display: flex;
+    padding: 5px;
+    font-size: 20px;
+    width: 500px;
+    color: #FFF;
+    box-shadow: 1px 3px 8px rgba(0,0,0, 0.5);
+}
+
+.buttonEdit {
+    background-color: transparent;
+    border: 0;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.buttonEdit:hover{
+    transform: scale(1.2);
+}
+
+li::marker{
+    display: none;
+}
+
