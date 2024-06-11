@@ -45,14 +45,16 @@ function App() {
 
     const listItems = taskList.map((t) => {
       return <li key = {t.id}>
-          <div>
+          <div className='displayContainer'>
             {t.title}
+            <div className='displayButtons'>
               <button className='buttonEdit' onClick={() => remove(t.id)}>
                 <FiMinus size={20} color="#FFF"/>
               </button>
               <button className='buttonEdit' onClick={() => edit(t)}>
                 <FiEdit size={20} color="#FFF"/>
               </button>
+            </div>
           </div>
         </li>
     });
@@ -76,7 +78,7 @@ function App() {
       </div>
 
       {taskList.length > 0 && 
-        <div className='displayContainer'>
+        <div >
             <ul>{listItems}</ul>
         </div>
       }

@@ -1,5 +1,5 @@
 .container {
-    height: 100vh;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,11 +48,17 @@
     border-radius: 8px;
     margin: 14px 0;
     display: flex;
-    padding: 5px;
+    padding: 15px;
     font-size: 20px;
     width: 500px;
     color: #FFF;
     box-shadow: 1px 3px 8px rgba(0,0,0, 0.5);
+}
+
+.displayButtons {
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
 }
 
 .buttonEdit {
@@ -68,7 +74,7 @@
     transform: scale(1.2);
 }
 
-li::marker{
-    display: none;
+ul {
+    list-style-type: none;
 }
 
