@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/taskAppReact/static/css/main.cfc1e41e.css",
-    "main.js": "/taskAppReact/static/js/main.0ff1e410.js",
+    "main.css": "/taskAppReact/static/css/main.6ea5dea7.css",
+    "main.js": "/taskAppReact/static/js/main.454906a3.js",
     "index.html": "/taskAppReact/index.html",
-    "main.cfc1e41e.css.map": "/taskAppReact/static/css/main.cfc1e41e.css.map",
-    "main.0ff1e410.js.map": "/taskAppReact/static/js/main.0ff1e410.js.map"
+    "main.6ea5dea7.css.map": "/taskAppReact/static/css/main.6ea5dea7.css.map",
+    "main.454906a3.js.map": "/taskAppReact/static/js/main.454906a3.js.map"
   },
   "entrypoints": [
-    "static/css/main.cfc1e41e.css",
-    "static/js/main.0ff1e410.js"
+    "static/css/main.6ea5dea7.css",
+    "static/js/main.454906a3.js"
   ]
 }
