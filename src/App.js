@@ -8,14 +8,14 @@ function App() {
   const [task, setTask] = useState('');
   const [taskList, settaskList] = useState([]);
   const [editedTask, seteditedTask] = useState(null);
-  
+
 
   function add() {
-    if(task === ''){
+    if (task === '') {
       alert('Preencher a tarefa');
       return;
     }
-    settaskList([...taskList, {id: Date.now().toString(), title: task}])
+    settaskList([...taskList, { id: Date.now().toString(), title: task }])
     setTask('');
   }
 
@@ -31,8 +31,8 @@ function App() {
 
   function update() {
     const updatedTaskList = taskList.map((item) => {
-      if(item.id === editedTask.id){
-        return { ...item, title: task}
+      if (item.id === editedTask.id) {
+        return { ...item, title: task }
       }
 
       return item;
@@ -43,47 +43,45 @@ function App() {
     setTask("");
   }
 
-    const listItems = taskList.map((t) => {
-      return <li key = {t.id}>
-          <div className='displayContainer'>
-            {t.title}
-            <div className='displayButtons'>
-              <button className='buttonEdit' onClick={() => remove(t.id)}>
-                <FiMinus size={20} color="#FFF"/>
-              </button>
-              <button className='buttonEdit' onClick={() => edit(t)}>
-                <FiEdit size={20} color="#FFF"/>
-              </button>
-            </div>
-          </div>
-        </li>
-    });
+  const listItems = taskList.map((t) => {
+    return <li key={t.id}>
+      <div className='displayContainer'>
+        {t.title}
+        <div className='displayButtons'>
+          <button className='buttonEdit' onClick={() => remove(t.id)}>
+            <FiMinus size={20} color="#FFF" />
+          </button>
+          <button className='buttonEdit' onClick={() => edit(t)}>
+            <FiEdit size={20} color="#FFF" />
+          </button>
+        </div>
+      </div>
+    </li>
+  });
 
   return (
     <div className="container">
       <h1 className="title">to-do-list app</h1>
       <div className="containerInput">
         <input
-        type= "text"
-        placeholder= "Digite a sua tarefa"
-        value={task}
-        onChange={(e) => setTask(e.target.value) }
+          type="text"
+          placeholder="Digite a sua tarefa"
+          value={task}
+          onChange={(e) => setTask(e.target.value)}
         />
-        { !editedTask ? <button className='buttonAdd' onClick={add}>
-          <FiPlus size={25} color="#FFF"/>
+        {!editedTask ? <button className='buttonAdd' onClick={add}>
+          <FiPlus size={25} color="#FFF" />
         </button> :
-        <button className='buttonAdd' onClick={() => update()}>
-        <FiEdit size={25} color="#FFF"/>
-      </button>}
+          <button className='buttonAdd' onClick={() => update()}>
+            <FiEdit size={25} color="#FFF" />
+          </button>}
       </div>
 
-      {taskList.length > 0 && 
-        <div >
-            <ul>{listItems}</ul>
-        </div>
+      {taskList.length > 0 &&
+        <div className='divList'>{listItems}</div>
       }
     </div>
-    
+
   );
 }
 
